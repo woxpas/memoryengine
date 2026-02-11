@@ -83,7 +83,7 @@ The Woxpas MCP server lets you use your personal memory from AI assistants like 
 | Cursor | Working | SSE |
 | Langdock | Working | SSE |
 | Gemini CLI | Working | SSE |
-| Claude Desktop | Known issue | SSE (bug on Claude's side — [tracked with Anthropic](https://github.com/modelcontextprotocol/servers)) |
+| Claude Desktop | Working | SSE |
 
 ### Available tools
 
