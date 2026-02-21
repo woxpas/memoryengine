@@ -130,6 +130,8 @@ The Woxpas MCP server lets you use your personal memory from AI assistants like 
 - Tool responses that are empty, truncated, or incorrect
 - Transport-specific issues on specific clients
 
+[![MCP Badge](https://lobehub.com/badge/mcp/woxpas-memoryengine)](https://lobehub.com/mcp/woxpas-memoryengine)
+
 ---
 
 ## Browser Extension
