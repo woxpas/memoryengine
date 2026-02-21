@@ -1,8 +1,8 @@
-# Woxpas — Personal Memory Engine
+# Woxpas — The Memory Layer You Own
 
-**Your second brain that actually remembers.**
+**One memory you own. Works with every AI tool you use.**
 
-Woxpas is a personal memory engine that transforms your documents into living knowledge. Unlike static file storage, Woxpas understands what you've saved, connects related ideas across documents, and resurfaces forgotten insights exactly when you need them.
+Woxpas is the memory layer you own. Use it on its own or connect it across every AI tool you work with. Your AI tools don't talk to each other, and they each decide what to remember about you without asking. Woxpas fixes both — one vault you control, accessible by every agent you work with.
 
 ---
 
@@ -20,17 +20,22 @@ Woxpas is a personal memory engine that transforms your documents into living kn
 
 ## What is Woxpas?
 
-Woxpas ingests your content — notes, PDFs, documents, audio — and builds a living memory that grows with you. It extracts entities, events, ideas, and commitments from your files, maps connections between them in a knowledge graph, and resurfaces what matters through a daily digest and intelligent retrieval.
+Woxpas gives you one memory that works across every AI tool — Claude, ChatGPT, Cursor, Gemini CLI*, Slack, and any MCP-compatible tool. Capture from anywhere, and your context follows you. Woxpas automatically extracts entities, events, commitments, and knowledge claims from everything you save, connects them in a knowledge graph, catches contradictions across your tools and notes, and resurfaces what matters through a daily digest.
+
+You decide what gets remembered, corrected, or deleted. Every answer cites its source.
 
 **Core features:**
 
-- **Memory Home** — A capture canvas and signals layer showing what's active (Thinking), what's returning (Echoes), and what's forming (Emerging)
-- **Knowledge Graph** — Visual map of how your ideas connect across documents, with 5 node types and 11 edge types
-- **Smart Retrieval** — Ask questions in natural language with automatic mode selection (meaning vs artefact vs recent recall)
-- **Follow-ups & Events** — Automatic commitment tracking with reliability scores and calendar sync
-- **Daily Digest** — AI-generated summary of resurfaced memories, upcoming commitments, and emerging patterns
-- **Citations** — Every answer links back to the exact source passage in your documents
-- **Integrations** — MCP server for AI assistants, Chrome extension for quick capture, Google Drive import
+- **Cross-tool memory via MCP** — Connect your vault to Claude, ChatGPT, Cursor, Gemini CLI*, Langdock, and any MCP-compatible tool. Save once, use everywhere.
+- **Your memory, your rules** — Full control to edit, correct, or delete anything. Your data is never used to train models.
+- **Automatic extraction** — Entities, commitments, events, topics, and knowledge claims extracted from messy input. No tagging, no folders.
+- **Conflict detection** — Catches contradictions across tools and notes. Value mismatches, timeline contradictions, decision reversals — flagged automatically.
+- **Daily Digest** — AI-generated briefing with resurfaced memories, upcoming commitments, unresolved conflicts, and emerging patterns.
+- **Capture anywhere** — Browser extension, Slack, direct chat, file upload, or any AI tool via MCP.
+- **Knowledge Graph** — Visual map of how your ideas connect across documents, with 5 node types and 11 edge types.
+- **Smart Retrieval** — Ask questions in natural language with automatic mode selection (meaning vs artefact vs recent recall).
+- **Citations** — Every answer links back to the exact source passage in your documents.
+- **Follow-ups & Events** — Automatic commitment tracking with reliability scores and calendar sync.
 
 ---
 
@@ -59,7 +64,7 @@ The main Woxpas application at [woxpas.ai](https://woxpas.ai).
 - **Explore**: Interactive knowledge graph with search, filtering, and node/edge inspection.
 - **Ask**: Natural language search across your entire memory with cited responses.
 - **Follow-ups & Events**: Extracted commitments and events with status tracking and calendar subscription.
-- **Daily Digest**: Personalised AI-generated email summary.
+- **Daily Digest**: Personalised AI-generated summary.
 - **Settings**: 6 tabs — General, Billing & Usage, Data & Privacy, Privacy Dashboard, Security, Developer.
 
 ### Known areas to report
@@ -79,7 +84,7 @@ The Woxpas MCP server lets you use your personal memory from AI assistants like 
 | Client | Status | Transport |
 |--------|--------|-----------|
 | Claude Code (CLI) | Working | SSE |
-| ChatGPT | Working | SSE |
+| ChatGPT (Dev mode) | Working | SSE |
 | Cursor | Working | SSE |
 | Langdock | Working | SSE |
 | Gemini CLI | Working | SSE |
@@ -91,7 +96,15 @@ The Woxpas MCP server lets you use your personal memory from AI assistants like 
 |------|-------------|
 | `capture_messy_intent` | Save content to your memory vault |
 | `recall_temporal_context` | Search and retrieve from your memory |
-| `resolve_human_logic` | Look up a specific entity (person, project, etc.) |
+| `resolve_human_logic` | Look up a specific entity (person, project, ticket) |
+| `list_by_type` | List commitments, events, or ideas with status and time filters |
+| `list_vault_files` | Browse all files in your vault with enriched metadata |
+| `retrieve_file_content` | Get the full text content of a specific file |
+| `edit_commitment` | Edit a commitment's title, assignee, due date, or type |
+| `update_commitment_status` | Complete, cancel, reopen, skip, pause, or resume a commitment |
+| `list_conflicts` | View conflict groups where notes contain contradictory information |
+| `resolve_conflict` | Resolve a conflict by choosing a resolution strategy |
+| `get_daily_digest` | Get your AI-generated daily digest with insights and resurfaced memories |
 
 ### Setup
 
@@ -151,12 +164,12 @@ We use GitHub Issues to track bugs and feature requests during the beta.
 2. **Open a new issue** with the following details:
 
 ```
-**Component**: [Web App / MCP Server / Browser Extension]
-**What happened**: [Describe the issue clearly]
-**Expected behavior**: [What should have happened]
-**Steps to reproduce**: [How to trigger the issue]
-**Browser/Client**: [e.g. Chrome 120, Claude Code, ChatGPT]
-**Screenshots**: [If applicable]
+| **Component**: | [Web App / MCP Server / Browser Extension] |
+| **What happened**: | [Describe the issue clearly] |
+| **Expected behavior**: | [What should have happened] |
+| **Steps to reproduce**: | [How to trigger the issue] |
+| **Browser/Client**: | [e.g. Chrome 120, Claude Code, ChatGPT] |
+| **Screenshots**: | [If applicable] |
 ```
 
 ### Labels
@@ -169,7 +182,7 @@ We use GitHub Issues to track bugs and feature requests during the beta.
 | `extension` | Issues with the Chrome Quick Capture extension |
 | `extraction` | Issues with how content is extracted from documents |
 | `retrieval` | Issues with search results or answer quality |
-| `digest` | Issues with the daily digest email |
+| `digest` | Issues with the daily digest |
 | `ui` | Visual or interaction issues |
 | `feature-request` | Suggestions for new features or improvements |
 
@@ -214,4 +227,4 @@ Woxpas is currently in **Beta**. The core memory engine is functional, but expec
 
 ---
 
-*Woxpas — Because your ideas deserve to be remembered.*
+*Woxpas — The memory layer you own.*
